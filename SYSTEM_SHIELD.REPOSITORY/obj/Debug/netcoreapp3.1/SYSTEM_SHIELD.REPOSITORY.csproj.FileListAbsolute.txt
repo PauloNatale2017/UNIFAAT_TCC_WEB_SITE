@@ -1,0 +1,10 @@
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.deps.json
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.dll
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.pdb
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.AssemblyInfoInputs.cache
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.AssemblyInfo.cs
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.dll
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.pdb
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.csprojAssemblyReference.cache
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.runtimeconfig.json
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.REPOSITORY\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.runtimeconfig.dev.json
