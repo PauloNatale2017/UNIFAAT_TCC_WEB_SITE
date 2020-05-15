@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/angular-block-ui.css" rel="stylesheet" />
+
+    <link href="~/css/fusioncharts.theme.fusion.css" rel="stylesheet" />
+    <link href="~/css/fusiondesign.css" rel="stylesheet" />
+    <link href="~/css/ui-grid.css" rel="stylesheet" />
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD21fXMDeTrDmxLC5yOPWBjM9fOOR20JBY&sensor=true">
+</script>
+
+<div style="background-color:white;width:100%;height:800px;margin: -2% 1% 1% 2%;" ng-controller="CtrlCentral">
+ 
+    <div class="row">
+        <p ng-repeat="item in cidades">
+            <button type="button" class="btn btn-primary" style="margin: 2px 2px 2px 2px;">
+                {{item.Nome}}
+                <span class="badge badge-light">{{item.quantidade}}</span>
+            </button>
+        </p>
+    </div>
+    <div class="row">
+        <div id="map_canvas" class="col-xl-12" style="width:100%;height:600px;margin-top: 7px; float: left;">
+        </div>
+    </div>
+   
+</div>
+
+
+<script src="~/js/Central.js"></script>

@@ -1,13 +1,13 @@
 ﻿
 var app = angular.module('App', ['blockUI', 'ng-fusioncharts']);
 var Obj;
-var token = "";
+var path = "";
 
 app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI', '$timeout', '$interval',
     function ($scope, $http, $location, $window, blockUI, $timeout, $interval) {
 
         Obj = $scope;
-        //Bloqueo de UI
+        path = $window.location.origin;
        
 
         $scope.ChamaApiLogin = function () {
@@ -19,7 +19,7 @@ app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI
             $http.post("/api/login/loginUsers", JSON.stringify(model)).then(function (response) {
                 var dados = response.data;
                 if (dados === "A")
-                    $window.location = "https://localhost:5001/Index";
+                    $window.location = path+"/Index";
 
                 alert("Usuario inexistente.");
             });

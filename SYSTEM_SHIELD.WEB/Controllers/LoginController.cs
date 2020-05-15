@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -15,6 +16,7 @@ using SYSTEM_SHIELD.REPOSITORY.Entities;
 namespace SYSTEM_SHIELD.WEB.Controllers
 {
 
+    //[Authorize]
     [Route("api/login")]
     [ApiController]
     public class LoginController : Controller
@@ -32,6 +34,7 @@ namespace SYSTEM_SHIELD.WEB.Controllers
 
         }
 
+        [AllowAnonymous]
         [Route("loginUsers")]
         [HttpPost]
         public async Task<string> GetLoginUsers(UserLogin request)

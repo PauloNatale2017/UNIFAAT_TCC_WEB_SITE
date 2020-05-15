@@ -417,3 +417,4 @@ C:\Users\paulo\source\repos\SYSTEM_SHIELD.WEB\bin\Debug\netcoreapp3.1\runtimes\w
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.WEB\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.WEB\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.WEB\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\paulo\source\repos\SYSTEM_SHIELD.WEB\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB.xml

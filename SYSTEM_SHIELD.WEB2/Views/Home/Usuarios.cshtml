@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="container" style="display:inline-flex; margin: 20px 1px 1px 20px;">
+    @for (int i = 0; i < 5; i++)
+    {
+         var nameperfil = "perfil"+i.ToString()+".jpg";
+         <div class="row">
+             @for (int o = 0; o < 1; o++)
+             {                
+                 <div class="w3-card-4" style="width: 100%; margin: 1px 36px 10px 1px;cursor:pointer">
+                     <img src="/images/perfil/@nameperfil" alt="Alps" style="width:100%">
+                     <div class="w3-container w3-center">
+                         <p>ATIBAIA</p>
+                     </div>
+                 </div>
+             }            
+         </div>
+     
+    }
+</div>
+
+@*<div class="w3-row" style=" margin: 1px 1px 1px 1px;">
+        <div class="w3-col l3 m6 s4 w3-green w3-center"><p>NOME</p></div>
+        <div class="w3-col l7 m3 s4 w3-dark-grey w3-center"><p>ENDEREÇO</p></div>
+        <div class="w3-col l2 m3 s4 w3-red w3-center"><p>CONTATO</p></div>
+    </div>*@
+
