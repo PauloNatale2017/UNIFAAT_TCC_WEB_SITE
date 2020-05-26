@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="layouts\" />
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\images\backgroud\" />
     <Folder Include="wwwroot\vendor\" />
   </ItemGroup>
 
@@ -17,6 +18,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SYSTEM_SHIELD.REPOSITORY\SYSTEM_SHIELD.REPOSITORY.csproj" />
   </ItemGroup>
 
 

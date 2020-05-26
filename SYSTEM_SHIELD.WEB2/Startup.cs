@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SYSTEM_SHIELD.REPOSITORY.ModuloEnvios;
 
 namespace SYSTEM_SHIELD.WEB2
 {
@@ -36,6 +38,7 @@ namespace SYSTEM_SHIELD.WEB2
                  Config.LoginPath = "/Home/LoginUsuarios";
              });
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddControllersWithViews();
         }
 

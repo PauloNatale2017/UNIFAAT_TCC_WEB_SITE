@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.3",
           "SYSTEM_SHIELD.REPOSITORY": "1.0.0",
-          "dotnet-aspnet-codegenerator-design": "3.1.1.0",
+          "dotnet-aspnet-codegenerator-design": "3.1.2.0",
           "Microsoft.AspNetCore.Mvc.Razor.Extensions": "3.1.3.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.3.0",
           "Microsoft.AspNetCore.Razor.Language": "3.1.3.0",
@@ -24,13 +24,13 @@
           "Microsoft.EntityFrameworkCore.Design.Reference": "3.1.3.0",
           "Microsoft.Extensions.DependencyModel": "3.1.3.0",
           "Microsoft.Identity.Client.Reference": "3.0.8.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.1.0",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.1.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.2.0",
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.2.0",
           "Microsoft.Web.Infrastructure": "1.0.0.0",
           "Newtonsoft.Json": "11.0.0.0",
           "NuGet.Frameworks": "4.7.0.5",
@@ -900,11 +900,11 @@
           "SYSTEM_SHIELD.REPOSITORY.dll": {}
         }
       },
-      "dotnet-aspnet-codegenerator-design/3.1.1.0": {
+      "dotnet-aspnet-codegenerator-design/3.1.2.0": {
         "runtime": {
           "dotnet-aspnet-codegenerator-design.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
@@ -1160,59 +1160,59 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1.0": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2.0": {
         "runtime": {
           "Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
-            "assemblyVersion": "3.1.1.0",
-            "fileVersion": "3.100.120.7405"
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.100.220.17701"
           }
         }
       },
@@ -1989,7 +1989,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "dotnet-aspnet-codegenerator-design/3.1.1.0": {
+    "dotnet-aspnet-codegenerator-design/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -2049,37 +2049,37 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1.0": {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

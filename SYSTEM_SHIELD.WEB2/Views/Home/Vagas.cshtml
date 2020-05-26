@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewData["Title"] = "Vagas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/js/jquery-3.2.1.js"></script>
+<script src="~/js/angular.js"></script>
+<script src="~/js/crossfilter.js"></script>
+<script src="~/js/fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.min.js"></script>
+<script src="~/js/fusioncharts.theme.fusion.js"></script>
+<script src="~/js/fusioncharts.maps.js"></script>
+<script src="~/js/ng-map.min.js"></script>
+<script src="~/js/angular-block-ui.js"></script>
+<link href="~/css/angular-block-ui.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<link rel="stylesheet" href="path-to-block-ui/angular-block-ui.min.css" />
+<!-- After AngularJS -->
+<script src="path-to-block-ui/angular-block-ui.min.js"></script>
+
+@*<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">*@
+
+
+<style type="text/css">
+    .CardModel {
+        width: 100%;
+        height: 226px;
+        background-color: white;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: black 1px 1px 6px;
+        margin: 1px 1px 15px 1px;
+        background: url(/images/backgroud/backpapel7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<div class="container" ng-controller="CtrlVagas">
+
+
+    
+
+    <div class="row">
+        <button type="button" class="btn btn-outline-primary">PAINEL DE VAGAS CADASTRADAS PARA USUARIOS ROSE SHIELD.</button>
+        <button type="button" class="btn btn-outline-success" style="float:left;margin-left:15px;">TOTAL DE VAGAS ATIVAS: {{TOTALGERAL}}.</button>
+    </div>
+    <br /><hr />
+
+    @*public string NomeVaga { get; set; }
+        public string ValorSalario { get; set; }
+        public string Descricao { get; set; }
+        public string InformacoeAdicionais { get; set; }
+        public string AvisosDaEmpresa { get; set; }
+        public string Restricoes { get; set; }
+        public int IdEmpresa { get; set; }*@
+
+
+    <div class="row" ng-repeat="dados in DadosVagas">
+        <div class="CardModel">
+            <div class="row" style="background-color: transparent;width: 98%; height: 50px;float: left; margin: 10px 8px 2px 12px;">
+                <span style="font-style: oblique;font-family: fantasy;font-size: x-large;color: #798dc4cf;">Nome da Vaga:</span>
+                <span style="float: left;margin-left: 7px;font-style: oblique;font-family: fantasy;font-size: x-large; color: #f61d05cc;">{{dados.NomeVaga}}</span>
+                <span style="font-style: oblique; font-family: fantasy; font-size: x-large; float: left; color: #798dc4cf; margin-left: 30px;">Valor Salario:</span>
+                <span style="float: left;margin-left: 7px;font-style: oblique;font-family: fantasy;font-size: x-large; color: #f61d05cc;">{{dados.ValorSalario}}</span>
+                <span style="font-style: oblique; font-family: fantasy; font-size: x-large; float: left; color: #798dc4cf;  margin-left: 15px;">Tota de Vagas:</span>
+                <span style="float: left; margin-left: 7px;font-style: oblique;font-family: fantasy; font-size: x-large; color: #f61d05cc;">{{TotaDeVagas}}</span>
+            </div>
+            <div class="row" style="background-color:transparent; width: 98%; height: 104px;float: left; margin: 0px 8px 8px 12px;">
+                <span style="font-style: oblique;font-family: fantasy;font-size: x-large;color: #798dc4cf;">
+                    Descrição da Vaga:
+                    <span style="margin-left: 16px !important;font-style: normal;font-size: 14px;color: black; font-family: initial;">{{dados.Descricao}}</span>
+                </span>
+            </div>
+            <div class="row" style="background-color:transparent; width: 98%; height: 50px; float: left; margin: -6px 8px 8px 12px;">
+                <button type="button" ng-click="Alert()" class="btn btn-outline-primary" data-toggle="modal" data-target="#CANDIDATARSER_{{dados.Id}}">CANDIDATAR-ALGUEM</button>
+                <button type="button" class="btn btn-outline-info" style="float: left; margin-left: 5px;" data-toggle="modal" data-target="#INFORMACOESADICIOANIS_{{dados.Id}}">INFORMAÇÕES ADICIONAIS</button>
+                <button type="button" class="btn btn-outline-warning" style="float: left; margin-left: 5px;" data-toggle="modal" data-target="#AVISOSDAEMPRESA_{{dados.Id}}">AVISOS DA EMPRESA</button>
+                <button type="button" class="btn btn-outline-danger" style="float: left; margin-left: 5px;" data-toggle="modal" data-target="#RESTRICOES_{{dados.Id}}">RESTRIÇÕES DA EMPRESA</button>
+
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="CANDIDATARSER_{{dados.Id}}">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="text-align:center;">USUARIOS CADASTRADOS PARA A VAGA</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <h2>{{dados.NomeVaga}}</h2>
+                            <p>{{dados.Descricao}}</p>
+
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Nome Completo</th>
+                                        <th>Rg/CPF</th>
+                                        <th>E-Mail</th>
+                                        <th>CANDIDATURA</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="item in CadastroBasicoVitimas">
+                                    <tr>
+                                        <td>{{item.NomeCompleto}}</td>
+                                        <td>{{item.Rg_CPF}}</td>
+                                        <td>{{item.Email}}</td>
+                                        <td><button type="button" ng-click="Enviar(dados.Id,item.Id,item.Email)" class="btn btn-success">ENVIAR</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="INFORMACOESADICIOANIS_{{dados.Id}}">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        {{dados.InformacoeAdicionais}}
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="AVISOSDAEMPRESA_{{dados.Id}}">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        {{dados.AvisosDaEmpresa}}
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="RESTRICOES_{{dados.Id}}">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        {{dados.Restricoes}}
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+<script src="~/js/Vagas.js"></script>
+

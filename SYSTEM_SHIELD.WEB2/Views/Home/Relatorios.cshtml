@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewData["Title"] = "Relatorios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/js/jquery-3.2.1.js"></script>
+<script src="~/js/angular.js"></script>
+<script src="~/js/angular-block-ui.js"></script>
+<script src="~/js/fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" 
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" 
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    var app = angular.module('App', ['blockUI', 'ng-fusioncharts']);
+    var Obj;
+    var token = "";
+
+    app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'blockUI', '$timeout', '$interval',
+        function ($scope, $http, $location, $window, blockUI, $timeout, $interval) {
+
+            Obj = $scope;
+
+            $scope.Pdf = function () {
+
+
+            }
+
+
+        }]);
+</script>
+
+<script type="text/javascript">
+    var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#btGerarPDF').click(function () {
+    doc.fromHTML($('#conteudo').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('exemplo-pdf.pdf');
+});
+</script>
+
+<div class="container" ng-controller="CtrlRelatorios">
+    <div id="conteudo">
+        <h3>Olá, esta é uma tag H3</h3>
+
+        <p>Um parágrafo.</p>
+    </div>
+    <div id="editor"></div>
+    <button id="btGerarPDF">gerar PDF</button>
+
+    <h2>PAGINA DE RELAORIOS</h2>
+    <p>TODOS OS DADOS SERÃO EXTRAIDOS E CONVERTIDOS EM UM RELATORIO PARA EXPORT</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Default</td>
+                <td>Defaultson</td>
+                <td>def@somemail.com</td>
+            </tr>
+            <tr class="table-primary">
+                <td>Primary</td>
+                <td>Joe</td>
+                <td>joe@example.com</td>
+            </tr>
+            <tr class="table-success">
+                <td>Success</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr class="table-danger">
+                <td>Danger</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr class="table-info">
+                <td>Info</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            <tr class="table-warning">
+                <td>Warning</td>
+                <td>Refs</td>
+                <td>bo@example.com</td>
+            </tr>
+            <tr class="table-active">
+                <td>Active</td>
+                <td>Activeson</td>
+                <td>act@example.com</td>
+            </tr>
+            <tr class="table-secondary">
+                <td>Secondary</td>
+                <td>Secondson</td>
+                <td>sec@example.com</td>
+            </tr>
+            <tr class="table-light">
+                <td>Light</td>
+                <td>Angie</td>
+                <td>angie@example.com</td>
+            </tr>
+            <tr class="table-dark text-dark">
+                <td>Dark</td>
+                <td>Bo</td>
+                <td>bo@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

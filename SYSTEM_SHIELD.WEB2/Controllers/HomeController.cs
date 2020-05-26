@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SYSTEM_SHIELD.REPOSITORY.ModuloEnvios;
 using SYSTEM_SHIELD.WEB2.Models;
 
 namespace SYSTEM_SHIELD.WEB2.Controllers
@@ -15,19 +16,17 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
+        private readonly ISendEmail _sender;
+        public HomeController(ILogger<HomeController> logger){
+            _logger = logger;            
         }
 
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
-        {
+        {           
             return View();
         }
-
-
+        
         public IActionResult Usuarios()
         {
             return View();
@@ -48,9 +47,8 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-        [Authorize]
+        
+        //[Authorize]
         public IActionResult Secret()
         {
             return View();
@@ -58,15 +56,13 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
 
         public IActionResult Authenticate()
         {
-            var grandmaClaims = new List<Claim>()
-            {
+            var grandmaClaims = new List<Claim>(){
                 new Claim(ClaimTypes.Name,"Paulo"),
                 new Claim(ClaimTypes.Email,"paulo000natale@gmail.com"),
                 new Claim("Grandma.Says","Very nice boy.")
             };
 
-            var licenseClaim = new List<Claim>()
-            {
+            var licenseClaim = new List<Claim>(){
                  new Claim(ClaimTypes.Name,"Paulo"),
                  new Claim("DrivingLicense","A+")
             };
@@ -80,6 +76,76 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
 
             return RedirectToAction("Index");
         }
+        
+        #region METODOS DO LAYOUT
+
+
+        public IActionResult Relatorios()
+        {
+            return View();
+        }
+
+
+        public IActionResult Chat()
+        {
+            return View();
+        }
+
+
+        public IActionResult Automacao()
+        {
+            return View();
+        }
+
+
+        public IActionResult Parceiros()
+        {
+            return View();
+        }
+
+
+        public IActionResult Vagas()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public void Vagas(string From,string Para)
+        {
+            SendEmail email = new SendEmail();
+            email.EnvioDeEmails(From, Para);
+        }
+
+
+        public IActionResult Ocorrencias()
+        {
+            return View();
+        }
+
+
+        public IActionResult Alertas()
+        {
+            return View();
+        }
+
+
+        #endregion
+
+        public class VgUsuario
+        {
+            public string VagaId { get; set; }
+            public string UsuarioId { get; set; }
+            public string Email { get; set; }
+        }
+
+        [HttpPost]
+        public bool EnviarEmail(VgUsuario entity)
+        {
+            var retornoEnvio = _sender.EnvioDeEmails(entity.Email, entity.Email);
+
+            return true;
+        }
+
 
     }
 }
