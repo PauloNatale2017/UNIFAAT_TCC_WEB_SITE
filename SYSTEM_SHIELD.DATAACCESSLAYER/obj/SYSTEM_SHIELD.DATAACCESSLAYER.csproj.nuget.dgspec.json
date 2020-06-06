@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj": {}
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj",
         "projectName": "SYSTEM_SHIELD.DATAACCESSLAYER",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.DATAACCESSLAYER\\SYSTEM_SHIELD.DATAACCESSLAYER.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.DATAACCESSLAYER\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.DATAACCESSLAYER\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
-                "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj"
+              "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
+                "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
         "projectName": "SYSTEM_SHIELD.REPOSITORY",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -133,6 +133,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
             }
           },
           "imports": [

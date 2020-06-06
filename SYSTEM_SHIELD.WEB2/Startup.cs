@@ -60,7 +60,7 @@ namespace SYSTEM_SHIELD.WEB2
 
             app.UseRouting();
 
-            app.UseCors("AllowAnyOrigin");
+            app.UseCors();
 
             //who are you?
             app.UseAuthentication();

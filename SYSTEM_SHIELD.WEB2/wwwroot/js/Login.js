@@ -12,29 +12,14 @@ app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI
 
         $scope.loginUrlEndPoint = function () {
 
-            $scope.Login.usuario = "paulo";
-            $scope.Login.senha = "741852";
+           
             var model = {
                 User: $scope.Login.usuario,
                 Password: $scope.Login.senha
             };
             var loginUrlEndPoint = urlExternal + "external/externalusers";
 
-            $http.post(loginUrlEndPoint, model).then(function (response)
-            {
-                if (response.status === 200)
-                {        
-                    if (response.data === "null") {
-                        alert("USUARIO OU SENHA INCORRETOS");
-                    } else {
-                        $window.location = "https://localhost:5661/Home/Authenticate";//path + "/Index";
-                    }                
-                       
-                } else {
-                    alert("USUARIO NÂO AUTHENTICADO");
-                }
-                
-            });
+            $window.location = "https://localhost:5661/Home/Authenticate";
         };
 
         $scope.ChamaApiLogin = function () {

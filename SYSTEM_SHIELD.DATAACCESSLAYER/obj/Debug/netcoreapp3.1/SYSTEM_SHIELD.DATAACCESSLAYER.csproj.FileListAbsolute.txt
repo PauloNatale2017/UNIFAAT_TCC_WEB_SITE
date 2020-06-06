@@ -100,3 +100,16 @@ C:\Users\paulo\source\repos\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.pdb
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.runtimeconfig.json
 C:\Users\paulo\source\repos\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.runtimeconfig.dev.json
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.deps.json
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.runtimeconfig.json
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.runtimeconfig.dev.json
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.pdb
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\bin\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.pdb
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.csprojAssemblyReference.cache
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.AssemblyInfoInputs.cache
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.AssemblyInfo.cs
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.csproj.CopyComplete
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.pdb

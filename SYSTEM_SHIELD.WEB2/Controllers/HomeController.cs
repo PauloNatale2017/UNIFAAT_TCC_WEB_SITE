@@ -6,9 +6,11 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SYSTEM_SHIELD.REPOSITORY.ModuloEnvios;
+using SYSTEM_SHIELD.REPOSITORY.Request;
 using SYSTEM_SHIELD.WEB2.Models;
 
 namespace SYSTEM_SHIELD.WEB2.Controllers
@@ -16,9 +18,10 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ISendEmail _sender;
-        public HomeController(ILogger<HomeController> logger){
-            _logger = logger;            
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
         }
 
         //[Authorize]
@@ -48,7 +51,7 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         
-        //[Authorize]
+        [Authorize]
         public IActionResult Secret()
         {
             return View();
@@ -131,7 +134,7 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
 
         #endregion
 
-        public class VgUsuario
+        public class request
         {
             public string VagaId { get; set; }
             public string UsuarioId { get; set; }
@@ -139,9 +142,15 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
         }
 
         [HttpPost]
-        public bool EnviarEmail(VgUsuario entity)
+        [EnableCors("AllowOrigin")]
+        public async Task<bool> EnviarEmail(string Email,string IdUsuario,string VagaId)
         {
-            var retornoEnvio = _sender.EnvioDeEmails(entity.Email, entity.Email);
+
+            //RequestApis request = new RequestApis();
+            //var usuarios =  request.RequestApiUsers();
+
+            SendEmail envio = new SendEmail();
+            var retornoEnvio =  envio.EnvioDeEmails(Email, Email);
 
             return true;
         }

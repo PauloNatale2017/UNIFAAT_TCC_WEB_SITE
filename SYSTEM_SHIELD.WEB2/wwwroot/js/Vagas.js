@@ -15,26 +15,50 @@ app.controller("CtrlVagas", ['$scope', '$http', '$location', '$window', 'blockUI
 
         Obj = $scope;
 
-        //$scope.TOTALGERAL = "187";
-        //$scope.VagaNome = "AUXILIAR DE INFERMAGEM";
-        //$scope.ValorSalario = "de 1.589.30 a 2.500,00";
-        //$scope.Descricao = "A Korn Ferry está assessorando uma Instituição da área médica, que visa contratar: AUXILIAR DE ENFERMAGEM sintomas, executar tratamentos especificamente prescritos ou de rotina, além de outras atividades de enfermagem leitura, para subsídio de diagnóstico; ";
-        //$scope.TotaDeVagas = "6";
-
         blockUI.start();
 
-        $scope.Enviar = function (idVaga, IdUsuario, Email) { 
+
+        $scope.SendEmail = function (idVaga, IdUsuario, _email) {
 
             var path = window.location.origin;
 
-            var model = {
+            var request = {
                 "VagaId": idVaga,
                 "UsuarioId": IdUsuario,
-                "Email": Email
+                "Email": _email
             };
 
-            $http.post("Home/EnviarEmail", model).then(function () {
+            console.log(request);
 
+            var dados = JSON.stringify(request);
+
+            $http.post(path + "/Home/EnviarEmail?Email=" + _email + "&IdUsuario=" + IdUsuario + "&VagaId=" + idVaga).then(function (response) {
+                if (response.status === 200) {
+                    if (response.data === "null") {
+                        alert("RETORNO DO REQUEST NULL");
+                    } else {
+                        alert(response.data );
+                    }
+
+                } else {
+                    alert("USUARIO NÂO AUTHENTICADO");
+                }
+            });
+        };
+
+
+        $scope.Enviar = function (idVaga, IdUsuario, _email) { 
+
+            var path = window.location.origin;
+
+            var request = {
+                //"VagaId": idVaga,
+                //"UsuarioId": IdUsuario,
+                "Email": _email
+            };
+
+            $http.post(path + "/Home/EnviarEmail", request).then(function () {
+                    
             });
 
             alert("CANDIDATURA ENVIADA COM SUCESSO");

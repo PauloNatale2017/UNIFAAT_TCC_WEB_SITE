@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj": {}
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
         "projectName": "SYSTEM_SHIELD.REPOSITORY",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -56,6 +56,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
             }
           },
           "imports": [
@@ -77,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj",
         "projectName": "SYSTEM_SHIELD.WEB2",
-        "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.WEB2\\SYSTEM_SHIELD.WEB2.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.WEB2\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.WEB2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -105,8 +113,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
-                "projectPath": "C:\\Users\\paulo\\source\\repos\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj"
+              "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj": {
+                "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\REPOSITOR_TCC\\WEB_S\\SYSTEM_SHIELD.REPOSITORY\\SYSTEM_SHIELD.REPOSITORY.csproj"
               }
             }
           }
@@ -123,6 +131,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.0.0.21, )"
             }
           },
           "imports": [
