@@ -21,7 +21,7 @@ namespace SYSTEM_SHIELD.REPOSITORY.Request
                 var RSrequest = new RestRequest(Method.GET) { RequestFormat = DataFormat.Json };
                 var retornos = client.Execute(RSrequest);
 
-                var client1 = new RestClient("https://localhost:5001/api/external/externalusersall");
+                var client1 = new RestClient("http://localhost:5001/api/external/externalusersall");
                 var RSrequest1 = new RestRequest(Method.GET) { RequestFormat = DataFormat.Json };
                 var retornos1 = client1.Execute(RSrequest);
 

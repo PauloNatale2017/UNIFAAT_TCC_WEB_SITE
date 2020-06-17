@@ -32,52 +32,123 @@
             <div class="p-4">
                 <h1><a href="index.html" class="logo">ROSE.S2</a></h1>
                 <ul class="list-unstyled components mb-5">
-                    <li class="active">  
-                        <a asp-area="" asp-controller="Home" asp-action="Index"> <span class="fa fa-home mr-3"></span>CENTRAL</a>                        
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Usuarios"> <span class="fa fa-user mr-3"></span>USUARIOS</a>                       
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Relatorios"> <span class="fa fa-briefcase mr-3"></span>RELATORIOS</a>                       
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Chat"> <span class="fa fa-sticky-note mr-3"></span>CHAT</a>                    
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Automacao"> <span class="fa fa-sticky-note mr-3"></span>AUTOMAÇÃO</a>                       
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Parceiros"> <span class="fa fa-sticky-note mr-3"></span>PARCEIROS</a>                        
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Vagas"> <span class="fa fa-sticky-note mr-3"></span>VAGAS DISPONIVEIS</a>                      
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Ocorrencias"> <span class="fa fa-sticky-note mr-3"></span>OCORRENCIAS</a>                     
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Alertas"> <span class="fa fa-sticky-note mr-3"></span>ALERTAS</a>                      
-                    </li>
-                </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        var acessos = User.Claims.ToList();
+                        bool finish = false;
 
-                <div class="mb-5">
-                    <h3 class="h6 mb-3">Subscribe for newsletter</h3>
-                    <form action="#" class="subscribe-form">
-                        <div class="form-group d-flex">
-                            <div class="icon"><span class="icon-paper-plane"></span></div>
-                            <input type="text" class="form-control" placeholder="Enter Email Address">
-                        </div>
-                    </form>
-                </div>
+                        foreach (var item in acessos)
+                        {
+
+                            var typo = item.Subject.Claims;
+
+                            foreach (var items in typo)
+                            {
+                                var tipo = items;
+
+                                switch (tipo.Type.ToString())
+                                {
+                                    case "ACCESS":
+                                        var array = tipo.Value.Split("&");
+
+                                        for (int i = 0; i < array.Length; i++)
+                                        {
+                                            var value = array[i];
+                                            switch (value)
+                                            {
+                                                case "HOME_OFF":
+                                                    <li class="active">
+                                                        <a asp-area="" asp-controller="Home" asp-action="Index"> <span class="fa fa-home mr-3"></span>CENTRAL</a>
+                                                    </li>
+                                                    break;
+
+                                                case "USUARIOS_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Usuarios"> <span class="fa fa-user mr-3"></span>USUARIOS</a>
+                                                    </li>
+                                                    break;
+
+                                                case "RELATORIOS_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Relatorios"> <span class="fa fa-briefcase mr-3"></span>RELATORIOS</a>
+                                                    </li>
+                                                    break;
+
+                                                case "CHAT_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Chat"> <span class="fa fa-sticky-note mr-3"></span>CHAT</a>
+                                                    </li>
+                                                    break;
+
+                                                case "AUTOMACAO_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Automacao"> <span class="fa fa-sticky-note mr-3"></span>AUTOMAÇÃO</a>
+                                                    </li>
+                                                    break;
+
+                                                case "VAGAS_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Vagas"> <span class="fa fa-sticky-note mr-3"></span>VAGAS DISPONIVEIS</a>
+                                                    </li>
+                                                    break;
+
+                                                case "OCORRENCIAS_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Ocorrencias"> <span class="fa fa-sticky-note mr-3"></span>OCORRENCIAS</a>
+                                                    </li>
+                                                    break;
+
+                                                case "NOTIFICACAO_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Alertas"> <span class="fa fa-sticky-note mr-3"></span>ALERTAS</a>
+                                                    </li>
+                                                    break;
+
+                                                case "PARCEIROS_ON":
+                                                    <li>
+                                                        <a asp-area="" asp-controller="Home" asp-action="Parceiros"> <span class="fa fa-sticky-note mr-3"></span>PARCEIROS</a>
+                                                    </li>
+                                                    break;
+
+                                                default:
+                                                    break;
+                                            }
+                                        }
+                                        finish = true;
+                                        break;
+
+                                    case "ACTIONS":
+                                        string b = "";
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+                                 if(finish == true)
+                                 {
+                                     break;
+                                 }
+
+                            }
+                            
+                            if(finish == true)
+                            {
+                                break;
+                            }
+
+
+                        }
+
+
+                    }
+
+                </ul>
 
                 <div class="footer">
                     <p>
-                   
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                     
                     </p>
                 </div>
 

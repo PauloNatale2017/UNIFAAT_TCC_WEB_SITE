@@ -18,3 +18,4 @@ C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.REPO
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.pdb
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.REPOSITORY.csprojAssemblyReference.cache
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.REPOSITORY\obj\Debug\netcoreapp3.1\RefitStubs.g.cs

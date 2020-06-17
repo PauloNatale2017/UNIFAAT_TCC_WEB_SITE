@@ -2,7 +2,7 @@
 var app = angular.module('App', ['blockUI', 'ng-fusioncharts']);
 var Obj;
 var path = "";
-var urlExternal = "https://localhost:5001/api/";
+var urlExternal = "http://localhost:5001/api/";
 
 app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI', '$timeout', '$interval',
     function ($scope, $http, $location, $window, blockUI, $timeout, $interval) {
@@ -11,7 +11,6 @@ app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI
         path = $window.location.origin;
 
         $scope.loginUrlEndPoint = function () {
-
            
             var model = {
                 User: $scope.Login.usuario,
@@ -19,21 +18,24 @@ app.controller("CtrlLogin", ['$scope', '$http', '$location', '$window', 'blockUI
             };
             var loginUrlEndPoint = urlExternal + "external/externalusers";
 
-            $window.location = "https://localhost:5661/Home/Authenticate";
+            $scope.ChamaApiLogin(loginUrlEndPoint);
         };
 
-        $scope.ChamaApiLogin = function () {
+        $scope.ChamaApiLogin = function (URL) {
             var model = {
                 User: $scope.Login.usuario,
                 Password: $scope.Login.senha
             };
 
-            $http.post("/api/login/loginUsers", JSON.stringify(model)).then(function (response) {
+            $http.post(URL, JSON.stringify(model)).then(function (response) {
                 var dados = response.data;
-                if (dados === "A")
-                    $window.location = path+"/Index";
-
-                alert("Usuario inexistente.");
+                if (dados.Id > 0) {
+                    //$window.location = path + "/Index";
+                    $window.location = "https://localhost:5661/Home/Authenticate?IdUsuario=" + JSON.stringify(dados.Id);
+                } else {
+                    alert("Usuario inexistente.");
+                }
+               
             });
         };
 

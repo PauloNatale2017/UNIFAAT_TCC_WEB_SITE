@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+
+using SYSTEM_SHIELD.REPOSITORY.Entities;
 using SYSTEM_SHIELD.REPOSITORY.ModuloEnvios;
 using SYSTEM_SHIELD.REPOSITORY.Request;
 using SYSTEM_SHIELD.WEB2.Models;
@@ -18,13 +20,15 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IApiService _ApiService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IApiService ApiService)
         {
             _logger = logger;
+            _ApiService = ApiService;
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult Index()
         {           
             return View();
@@ -32,6 +36,7 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
         
         public IActionResult Usuarios()
         {
+            
             return View();
         }
 
@@ -57,25 +62,35 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
             return View();
         }
 
-        public IActionResult Authenticate()
+        public IActionResult Authenticate(string IdUsuario)
         {
-            var grandmaClaims = new List<Claim>(){
-                new Claim(ClaimTypes.Name,"Paulo"),
-                new Claim(ClaimTypes.Email,"paulo000natale@gmail.com"),
-                new Claim("Grandma.Says","Very nice boy.")
-            };
 
-            var licenseClaim = new List<Claim>(){
-                 new Claim(ClaimTypes.Name,"Paulo"),
-                 new Claim("DrivingLicense","A+")
-            };
+            if(IdUsuario != "")
+            {
+                var retorno = _ApiService.GetPerfil(IdUsuario);
 
-            var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "Grandma Identity");
-            var licenseIdentity = new ClaimsIdentity(licenseClaim, "Governament");
+                var grandmaClaims = new List<Claim>(){
+                     new Claim(ClaimTypes.Name,retorno.Result[0].NomePerfil),
+                     new Claim(ClaimTypes.Email,"paulo000natale@gmail.com"),
+                     new Claim("ACCESS",retorno.Result[0].AccessPerfil),
+                     new Claim("ACTIONS",retorno.Result[0].ActionsPerfil)
+                };
 
-            var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
+                var licenseClaim = new List<Claim>(){
+                      new Claim(ClaimTypes.Name,"Paulo"),
+                      new Claim("DrivingLicense","A+")
+                };
 
-            HttpContext.SignInAsync(userPrincipal);
+                var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "GRANDMA IDENTITY");
+                var licenseIdentity = new ClaimsIdentity(licenseClaim, "GOVERNAMENT");
+
+                var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
+
+                HttpContext.SignInAsync(userPrincipal);
+
+                return RedirectToAction("Index");
+            }
+
 
             return RedirectToAction("Index");
         }

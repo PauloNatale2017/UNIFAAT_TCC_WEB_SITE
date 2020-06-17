@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SYSTEM_SHIELD.REPOSITORY.ModuloEnvios;
+using SYSTEM_SHIELD.REPOSITORY.Request;
 
 namespace SYSTEM_SHIELD.WEB2
 {
@@ -37,6 +38,8 @@ namespace SYSTEM_SHIELD.WEB2
                  Config.Cookie.Name = "Access.Cookie";
                  Config.LoginPath = "/Home/LoginUsuarios";
              });
+
+            services.AddTransient<IApiService, ApiService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddControllersWithViews();

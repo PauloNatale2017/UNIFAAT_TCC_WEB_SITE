@@ -14,12 +14,6 @@ namespace SYSTEM_SHIELD.REPOSITORY.ModuloEnvios
             string subject = "MATER DEY CADASTRO DE VAGAS";
             string body = @"<div style='background-color:red;height:100px;width:250px'>teste</div>";
 
-            //var client = new SmtpClient("smtp.gmail.com", 587){
-            //    Credentials = new NetworkCredential("paulo000natale@gmail.com", "P@ulo82929262"),
-            //    EnableSsl = true                
-            //};
-            //client.Send("paulo000natale@gmail.com", "paulo000natale@gmail.com", subject = " teste subject", body = "teste body");
-
             try
             {
                 //Instância classe email

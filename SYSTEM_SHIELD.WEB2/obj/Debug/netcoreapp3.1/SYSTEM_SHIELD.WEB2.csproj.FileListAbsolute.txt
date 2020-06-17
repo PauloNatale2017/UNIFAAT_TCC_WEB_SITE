@@ -306,4 +306,7 @@ C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\RestClient.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Refit.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\obj\Debug\netcoreapp3.1\RefitStubs.g.cs
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB2.MvcApplicationPartsAssemblyInfo.cache
