@@ -6,3 +6,43 @@
 
 <h1>Automacao</h1>
 
+
+<script src="~/js/jquery-3.2.1.js"></script>
+<script src="~/js/angular.js"></script>
+<script src="~/js/angular-block-ui.js"></script>
+<script src="~/js/fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    var app = angular.module('App', ['blockUI', 'ng-fusioncharts']);
+    var Obj;
+    var token = "";
+
+    app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'blockUI', '$timeout', '$interval',
+        function ($scope, $http, $location, $window, blockUI, $timeout, $interval) {
+
+            Obj = $scope;
+
+            $scope.Pdf = function () {
+
+
+            }
+
+
+        }]);
+</script>
+
+<div style="background-color: red;width: 100%;height: 800px;display: inherit;float: left;margin: 1% 0% 0% 1%;" ng-controller="CtrlRelatorios" class="ng-scope">
+    <div class="row" style="width: 100%;height: 121px;background-color: green;float: left;margin: 0% 0% 0% 0%;"></div>
+    <div class="row" style="width: 100%;height: 679px;background-color: blue; float: left;  margin: 0% 0% 0% 0%;"></div>
+</div>
+

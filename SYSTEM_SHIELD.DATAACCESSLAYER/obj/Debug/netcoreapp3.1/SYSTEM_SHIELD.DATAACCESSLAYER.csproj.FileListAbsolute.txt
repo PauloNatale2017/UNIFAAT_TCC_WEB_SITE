@@ -113,3 +113,4 @@ C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATA
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.csproj.CopyComplete
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.DATAACCESSLAYER.pdb
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.DATAACCESSLAYER\obj\Debug\netcoreapp3.1\RefitStubs.g.cs
