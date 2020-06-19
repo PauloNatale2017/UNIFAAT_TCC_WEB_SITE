@@ -14,10 +14,11 @@ app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'bl
         $scope.Filtro3 = [{ model: "OCORRENCIA", color: "blue" }];
         $scope.Filtro4 = [{ model: "VITIMAS", color: "white" }];
 
-        $scope.VitimaLits = [{}]
+        $scope.VitimaLits = [{}];
 
 
         $scope.CadastroBasicos = function () {
+
             var path = window.location.origin;
             var loginUrlEndPoint = urlExternal + "vitimas/cadastrosbasicos";
             blockUI.start("CARREGANDO...");
@@ -51,14 +52,14 @@ app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'bl
 
                         for (var i = 0; i < $scope.cadastrocompleto.length; i++) {
 
-                            var retornoFilterBasico = $scope.basic.filter(function (values) { return values.id === $scope.cadastrocompleto[i].IdCadastroBasico; });
+                            var retornoFilterBasico = $scope.basic.filter(function (values) { return values.Id === $scope.cadastrocompleto[i].IdCadastroBasico; });
                             $scope.Cadbasic = retornoFilterBasico;
 
-                            var retornoFilterComplemento = $scope.complementar.filter(function (values) { return values.id === $scope.cadastrocompleto[i].IdCadastroComplementar; });
+                            var retornoFilterComplemento = $scope.complementar.filter(function (values) { return values.IdCadastroBasico === $scope.cadastrocompleto[i].IdCadastroBasico; });
                             $scope.complemento = retornoFilterComplemento;
 
-                            var retornoFilterOcorrencia = $scope.ocorrencias.filter(function (values) { return values.id === $scope.cadastrocompleto[i].IdCadastroDeOcorrencia; });
-                            $scope.Ocorre = retornoFilterOcorrencia.NumeroBO;
+                            var retornoFilterOcorrencia = $scope.ocorrencias.filter(function (values) { return values.IdCadastroBasico === $scope.cadastrocompleto[i].IdCadastroBasico; });
+                            $scope.Ocorre = retornoFilterOcorrencia[i].NumeroBO;
 
                             var retornoFilterFilhos = $scope.filhos.filter(function (values) { return values.IdCadastroBasico === $scope.cadastrocompleto[i].IdCadastroBasico; });
                             $scope.qtdeFilhos = retornoFilterFilhos.length;
