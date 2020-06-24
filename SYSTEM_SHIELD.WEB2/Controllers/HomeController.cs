@@ -67,28 +67,33 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
 
             if(IdUsuario != "")
             {
-                var retorno = _ApiService.GetPerfil(IdUsuario);
+                var retorno =  _ApiService.GetPerfil(IdUsuario);
 
-                var grandmaClaims = new List<Claim>(){
+                if(retorno.Id != null)
+                {
+                    var grandmaClaims = new List<Claim>(){
                      new Claim(ClaimTypes.Name,retorno.Result[0].NomePerfil),
                      new Claim(ClaimTypes.Email,"paulo000natale@gmail.com"),
                      new Claim("ACCESS",retorno.Result[0].AccessPerfil),
                      new Claim("ACTIONS",retorno.Result[0].ActionsPerfil)
-                };
+                     };
 
-                var licenseClaim = new List<Claim>(){
+                    var licenseClaim = new List<Claim>(){
                       new Claim(ClaimTypes.Name,"Paulo"),
                       new Claim("DrivingLicense","A+")
-                };
+                     };
 
-                var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "GRANDMA IDENTITY");
-                var licenseIdentity = new ClaimsIdentity(licenseClaim, "GOVERNAMENT");
+                      var grandmaIdentity = new ClaimsIdentity(grandmaClaims, "GRANDMA IDENTITY");
+                      var licenseIdentity = new ClaimsIdentity(licenseClaim, "GOVERNAMENT");
 
-                var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
+                      var userPrincipal = new ClaimsPrincipal(new[] { grandmaIdentity, licenseIdentity });
 
-                HttpContext.SignInAsync(userPrincipal);
+                      HttpContext.SignInAsync(userPrincipal);
 
-                return RedirectToAction("Index");
+                      return RedirectToAction("Index");
+                }
+
+                
             }
 
 

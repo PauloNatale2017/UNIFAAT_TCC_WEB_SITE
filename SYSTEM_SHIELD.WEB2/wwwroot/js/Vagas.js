@@ -17,6 +17,7 @@ app.controller("CtrlVagas", ['$scope', '$http', '$location', '$window', 'blockUI
 
         blockUI.start();
 
+       
 
         $scope.SendEmail = function (idVaga, IdUsuario, _email) {
 
@@ -98,6 +99,13 @@ app.controller("CtrlVagas", ['$scope', '$http', '$location', '$window', 'blockUI
                     } else {
                         $scope.DadosVagas = response.data;
                         $scope.TotaDeVagas = response.data.length;
+
+                        if (response.data.length <= 0) {
+                            $scope.hiddenStyle = "hidden";
+                        } else {
+                            $scope.hiddenStyle = "visible";
+                            
+                        }
                         console.log(response.data);
                     }
 
