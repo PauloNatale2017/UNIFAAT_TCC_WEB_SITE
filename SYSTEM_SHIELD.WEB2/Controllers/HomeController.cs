@@ -135,8 +135,14 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
         [HttpPost]
         public void Vagas(string From,string Para)
         {
-            SendEmail email = new SendEmail();
-            email.EnvioDeEmails(From, Para);
+            //ApiService request = new ApiService();
+            //List<UserAccounts> usuarios = await request.GetEmailUsuario(IdUsuario);
+            //List<Vagas> vagasempresa = await request.GetVagasEmpresaUsuario(VagaId);
+
+            //SendEmail envio = new SendEmail();
+            //var retornoEnvio = envio.EnvioDeEmails(usuarios, vagasempresa, Email);
+
+           // return true;
         }
 
 
@@ -166,11 +172,12 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
         public async Task<bool> EnviarEmail(string Email,string IdUsuario,string VagaId)
         {
 
-            //RequestApis request = new RequestApis();
-            //var usuarios =  request.RequestApiUsers();
+            ApiService request = new ApiService();
+            List<VitimaBasic> usuarios = await request.GetEmailUsuario(IdUsuario);
+            List<Vagas> vagasempresa = await request.GetVagasEmpresaUsuario(VagaId);
 
             SendEmail envio = new SendEmail();
-            var retornoEnvio =  envio.EnvioDeEmails(Email, Email);
+            var retornoEnvio =  envio.EnvioDeEmails(usuarios, vagasempresa, Email);
 
             return true;
         }
