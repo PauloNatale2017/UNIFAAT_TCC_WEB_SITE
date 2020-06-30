@@ -14,7 +14,7 @@ namespace SYSTEM_SHIELD.REPOSITORY.ModuloEnvios
 
             string subject = "MATER DEY CADASTRO DE USUARIO";
 
-            string body = @"<div style='background -color: lightpink;height: 244px;width: 500px;text-align: center;font-size: large;font-weight: bold;color: white;font-family: initial;text-shadow: black 4px 7px 5px;'>CANDIDATO A VAGA " + vagasdados[0].NomeVaga + "<br>"
+            string body = @"<div style='background-color: lightpink;height: 244px;width: 500px;text-align: center;font-size: large;font-weight: bold;color: white;font-family: initial;text-shadow: black 4px 7px 5px;'>CANDIDATO A VAGA " + vagasdados[0].NomeVaga + "<br>"
                            + "   <span> NOME CANDIDATO:" + entity[0].NomeCompleto + "</span>"
                            + "    <hr> "
                            + "    CONTATO:" + entity[0].Contato + "<br>"
