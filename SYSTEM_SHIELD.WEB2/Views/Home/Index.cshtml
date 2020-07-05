@@ -16,12 +16,14 @@
 <div style="background-color:white;width:100%;height:800px;margin: -2% 1% 1% 2%;" ng-controller="CtrlCentral">
  
     <div class="row">
+
         <p ng-repeat="item in cidades">
             <button type="button" class="btn btn-primary" style="margin: 2px 2px 2px 2px;">
                 {{item.Nome}}
                 <span class="badge badge-light">{{item.quantidade}}</span>
             </button>
         </p>
+
     </div>
     <div class="row">
         <div id="map_canvas" class="col-xl-12" style="width:100%;height:600px;margin-top: 7px; float: left;">

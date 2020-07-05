@@ -38,11 +38,17 @@ app.controller("CtrlVagas", ['$scope', '$http', '$location', '$window', 'blockUI
                     if (response.data === "null") {
                         alert("RETORNO DO REQUEST NULL");
                     } else {
-                        alert(response.data );
+                        if (response.data === true) {
+                            blockUI.start("EMAIL ENVIADO COM SUCESSO");
+                            setTimeout(function () {
+                                blockUI.stop();
+                            },3000);
+                        }
+                        
                     }
 
                 } else {
-                    alert("USUARIO NÂO AUTHENTICADO");
+                    alert("USUARIO NÃO AUTHENTICADO");
                 }
             });
         };

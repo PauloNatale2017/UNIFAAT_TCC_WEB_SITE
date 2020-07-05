@@ -33,11 +33,25 @@ namespace SYSTEM_SHIELD.WEB2
                  .AllowAnyHeader());
              });
 
-             services.AddAuthentication("CookieAuth").AddCookie("CookieAuth", Config =>
-             {
-                 Config.Cookie.Name = "Access.Cookie";
-                 Config.LoginPath = "/Home/LoginUsuarios";
+            services.AddAuthentication().AddGoogle(optionsGoogle => {
+                 IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
+                 optionsGoogle.ClientId = "362174138108-civl5uco5beooo9fvl561roqj00f34eo.apps.googleusercontent.com";
+                 optionsGoogle.ClientSecret = "NtWqvy19YHGnsHrwzg-luRrW";
              });
+
+            services.AddAuthentication("CookieAuth").AddCookie("CookieAuth", Config =>
+            {
+                Config.Cookie.Name = "Access.Cookie";
+                Config.LoginPath = "/Home/LoginUsuarios";
+            });
+
+            //.AddGoogle(optionsGoogle => {
+
+            //    IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
+
+            //    optionsGoogle.ClientId = "362174138108-civl5uco5beooo9fvl561roqj00f34eo.apps.googleusercontent.com";
+            //    optionsGoogle.ClientSecret = "NtWqvy19YHGnsHrwzg-luRrW";                
+            //});
 
             services.AddTransient<IApiService, ApiService>();
 

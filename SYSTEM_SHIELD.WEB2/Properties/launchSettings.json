@@ -1,7 +1,7 @@
-﻿{
+{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:56669",
       "sslPort": 44360
@@ -18,10 +18,12 @@
     "SYSTEM_SHIELD.WEB2": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5661;http://localhost:5662",
       "environmentVariables": {
+        "Authentication:Google:ClientSecret": "NtWqvy19YHGnsHrwzg-luRrW",
+        "Authentication:Google:ClientId": "362174138108-civl5uco5beooo9fvl561roqj00f34eo.apps.googleusercontent.com",
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5661;http://localhost:5662"
     }
   }
 }

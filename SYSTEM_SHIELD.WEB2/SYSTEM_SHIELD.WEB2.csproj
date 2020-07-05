@@ -17,9 +17,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Owin.Security.Google" Version="4.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="PdfSharp" Version="1.50.5147" />
     <PackageReference Include="Refit" Version="5.1.67" />
     <PackageReference Include="RestClient" Version="3.0.0.21" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>

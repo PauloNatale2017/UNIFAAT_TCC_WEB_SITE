@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -28,12 +29,15 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
             _ApiService = ApiService;
         }
 
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
-        {           
+        {
+            Models.GeraPDF pdf = new GeraPDF();
+            pdf.Gerador();
+
             return View();
         }
-        
+
         public IActionResult Usuarios()
         {
             
@@ -182,6 +186,13 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
             return true;
         }
 
+
+
+        #region LOGIN GOOGLE
+
+
+
+        #endregion
 
     }
 }

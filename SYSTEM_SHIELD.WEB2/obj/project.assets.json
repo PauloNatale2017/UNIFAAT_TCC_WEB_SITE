@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "iTextSharp/5.5.13.1": {
+        "type": "package",
+        "compile": {
+          "lib/itextsharp.dll": {}
+        },
+        "runtime": {
+          "lib/itextsharp.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -617,7 +638,7 @@
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.2": {
+      "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -633,6 +654,46 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Owin/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.1.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Security.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Security.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Google/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.1.0",
+          "Microsoft.Owin.Security": "4.1.0",
+          "Newtonsoft.Json": "10.0.1",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Owin.Security.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Owin.Security.Google.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
@@ -775,6 +836,24 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -843,6 +922,34 @@
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
+        }
+      },
+      "PDFsharp/1.50.5147": {
+        "type": "package",
+        "compile": {
+          "lib/net20/PdfSharp.Charting.dll": {},
+          "lib/net20/PdfSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net20/PdfSharp.Charting.dll": {},
+          "lib/net20/PdfSharp.dll": {}
+        },
+        "resource": {
+          "lib/net20/de/PdfSharp.Charting.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/PdfSharp.resources.dll": {
+            "locale": "de"
+          }
         }
       },
       "Refit/5.1.67": {
@@ -1435,6 +1542,29 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "Microsoft.Win32.SystemEvents": "4.7.0"
+        },
+        "compile": {
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Globalization/4.3.0": {
@@ -2610,6 +2740,37 @@
     }
   },
   "libraries": {
+    "iTextSharp/5.5.13.1": {
+      "sha512": "xqzsYEYW/nMDjCtAXM5cl9fWil/Ju3HEGbsmoTKtltJc3M/9HNJzg++bCIOHm5uZITvRmZJWMO+S2u1yNG0gQg==",
+      "type": "package",
+      "path": "itextsharp/5.5.13.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "gnu-agpl-v3.0.md",
+        "itextsharp.5.5.13.1.nupkg.sha512",
+        "itextsharp.nuspec",
+        "lib/iTextSharp.xml",
+        "lib/itextsharp.dll",
+        "notice.txt"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.5": {
+      "sha512": "5fGJ3eKAEJRqu+cUqC2tVvITrbBx8x5JJbQbpD81Ob1q/My9pDitwaaDSBSkNeQ0J4J33Mub1D+3xS9K/9cTxg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.3.1.5.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -3385,17 +3546,17 @@
         "ref/xamarinmac20/Microsoft.Identity.Client.xml"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.2": {
-      "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
+    "Microsoft.NETCore.Platforms/3.1.0": {
+      "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.2",
+      "path": "microsoft.netcore.platforms/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+        "microsoft.netcore.platforms.3.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -3415,6 +3576,45 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.Owin/4.1.0": {
+      "sha512": "pMeDJpH9LUSeQv3Rc2tq/6s3yANPyBa7Qe0xAbpX7GGhfaLSgcUC+WCDb8QteDh7BMkBBnZ3BM8ol+IWbtNehA==",
+      "type": "package",
+      "path": "microsoft.owin/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Owin.XML",
+        "lib/net45/Microsoft.Owin.dll",
+        "microsoft.owin.4.1.0.nupkg.sha512",
+        "microsoft.owin.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Security/4.1.0": {
+      "sha512": "pzwy7buaZX5faHVK9Ig8O9w178y3eOha8BcZ/zViK8W2nR3SLyfDmo5Cgv5YmP1JR9hsMakwzffaQQncmOjgBA==",
+      "type": "package",
+      "path": "microsoft.owin.security/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Owin.Security.XML",
+        "lib/net45/Microsoft.Owin.Security.dll",
+        "microsoft.owin.security.4.1.0.nupkg.sha512",
+        "microsoft.owin.security.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Security.Google/4.1.0": {
+      "sha512": "PSb7SCQ1eGLd7AZHHFAbCF4/LWjcS7C4DSCxIlBKuxTjpp0ruXVfNKJ88QhdASvJvP03LdYnRzGrL3wm2Z/KCg==",
+      "type": "package",
+      "path": "microsoft.owin.security.google/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.Owin.Security.Google.XML",
+        "lib/net45/Microsoft.Owin.Security.Google.dll",
+        "microsoft.owin.security.google.4.1.0.nupkg.sha512",
+        "microsoft.owin.security.google.nuspec"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
@@ -3906,6 +4106,35 @@
         "version.txt"
       ]
     },
+    "Microsoft.Win32.SystemEvents/4.7.0": {
+      "sha512": "mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "ref/net461/Microsoft.Win32.SystemEvents.dll",
+        "ref/net461/Microsoft.Win32.SystemEvents.xml",
+        "ref/net472/Microsoft.Win32.SystemEvents.dll",
+        "ref/net472/Microsoft.Win32.SystemEvents.xml",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -3964,6 +4193,35 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Owin/1.0.0": {
+      "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "type": "package",
+      "path": "owin/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Owin.dll",
+        "owin.1.0.0.nupkg.sha512",
+        "owin.nuspec"
+      ]
+    },
+    "PDFsharp/1.50.5147": {
+      "sha512": "vr5KBIqcXu2hqZ43UTwPR+jqHgMrT5tsPtJvEF+mORKoBNMh3bRWgAwic0U1sT2IVb4PR5m0GyQxnmCz8jBHWg==",
+      "type": "package",
+      "path": "pdfsharp/1.50.5147",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/PdfSharp.Charting.dll",
+        "lib/net20/PdfSharp.Charting.xml",
+        "lib/net20/PdfSharp.dll",
+        "lib/net20/PdfSharp.xml",
+        "lib/net20/de/PdfSharp.Charting.resources.dll",
+        "lib/net20/de/PdfSharp.resources.dll",
+        "pdfsharp.1.50.5147.nupkg.sha512",
+        "pdfsharp.nuspec"
       ]
     },
     "Refit/5.1.67": {
@@ -5380,6 +5638,45 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.7.0": {
+      "sha512": "v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
+      "type": "package",
+      "path": "system.drawing.common/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.4.7.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -8541,10 +8838,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Authentication.Google >= 3.1.5",
+      "Microsoft.Owin.Security.Google >= 4.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2",
+      "PdfSharp >= 1.50.5147",
       "Refit >= 5.1.67",
       "RestClient >= 3.0.0.21",
-      "SYSTEM_SHIELD.REPOSITORY >= 1.0.0"
+      "SYSTEM_SHIELD.REPOSITORY >= 1.0.0",
+      "System.Drawing.Common >= 4.7.0",
+      "iTextSharp >= 5.5.13.1"
     ]
   },
   "packageFolders": {
@@ -8595,9 +8897,21 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.1.5, )"
+          },
+          "Microsoft.Owin.Security.Google": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.2, )"
+          },
+          "PdfSharp": {
+            "target": "Package",
+            "version": "[1.50.5147, )"
           },
           "Refit": {
             "target": "Package",
@@ -8606,6 +8920,14 @@
           "RestClient": {
             "target": "Package",
             "version": "[3.0.0.21, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[4.7.0, )"
+          },
+          "iTextSharp": {
+            "target": "Package",
+            "version": "[5.5.13.1, )"
           }
         },
         "imports": [
@@ -8629,5 +8951,67 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'iTextSharp 5.5.13.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Owin 4.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Owin.Security 4.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Owin.Security",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Owin.Security.Google 4.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Owin.Security.Google",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Owin 1.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'PDFsharp 1.50.5147' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "PDFsharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
