@@ -17,5 +17,8 @@ namespace SYSTEM_SHIELD.REPOSITORY.Request
 
         [Get("/externalvagasusuario/{idusuario}")]
         Task<List<Vagas>> GetVagasEmpresaUsuario(string IdUsuario);
+
+        [Get("/externalallvitimascompleto/{idusuario}")]
+        Task<List<VitimaBasic>> GetAllVitimas(string IdUsuario);
     }
 }

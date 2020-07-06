@@ -4,56 +4,126 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="~/js/jquery-3.2.1.js"></script>
+<script src="~/js/angular.js"></script>
+<script src="~/js/crossfilter.js"></script>
+<script src="~/js/fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.js"></script>
+<script src="~/js/angular-fusioncharts.min.js"></script>
+<script src="~/js/fusioncharts.theme.fusion.js"></script>
+<script src="~/js/fusioncharts.maps.js"></script>
+<script src="~/js/ng-map.min.js"></script>
+<script src="~/js/angular-block-ui.js"></script>
+<link href="~/css/angular-block-ui.css" rel="stylesheet" />
+
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<div class="container" style="display:inline-flex; margin: 20px 1px 1px 20px;">
-    @for (int i = 0; i < 5; i++)
-    {
-        var nameperfil = "perfil" + i.ToString() + ".jpg";
-        <div class="row">
-            @for (int o = 0; o < 5; o++)
-            {
-                <div class="w3-card-4" style="width: 100%; margin: 1px 36px 10px 1px;cursor:pointer" data-toggle="modal" data-target="#myModal">
-                    <img src="/images/perfil/@nameperfil" alt="Alps" style="width:100%">
-                    <div class="w3-container w3-center">
-                        <p>ATIBAIA</p>
+<div ng-controller="CtrlUsuarios">
+
+    <div class="" style="display: inline-flex;margin: 22px 8px 5px 41px;width: 100%;">
+        <div class="row" style="text-align: center;width: 100%;">
+
+            <div ng-repeat="vitimas in VitimasLits">
+
+                <div class="card" style="width: 400px; margin: 0px 10px 17px 4px">
+                    <img class="card-img-top" src="~/images/img_avatar6.png" alt="Card image" style="width:100%">    
+                    <div class="card-body">
+                        <h4 class="card-title">USUARIOS DESCRITO:<br /><span style="text-shadow: deeppink 0px 0px 2px;">{{vitimas.NomeCompleto}}</span></h4>
+                        <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                        <button type="button" class="btn btn-outline-danger" ng-click="BuscaInformacoes(vitimas.Id)" id="#BTN_VITIMA_{{vitimas.Id}}" data-toggle="modal" data-target="#MODAL_VITIMA_{{vitimas.Id}}">VISUALIZAR PERFIL VITIMA</button>
                     </div>
                 </div>
-            }
+
+
+                <div class="modal fade" id="MODAL_VITIMA_{{vitimas.Id}}">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="text-align:center;">INCORMAÇÃO COMPLEMENTARES</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>TIPO VIOLENCIA</label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#TipoViolencia_{{vitimas.Id}}" ype="text" class="form-control form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>DIA OCORRIDO </label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#DiaOcorrido_{{vitimas.Id}}" type="text" class="form-control form-control data">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>LOCAL OCORRIDO </label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#LocalOcorrido_{{vitimas.Id}}" type="text" class="form-control form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>TESTEMUNHA</label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#Testemunha_{{vitimas.Id}}" type="text" class="form-control form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>VINCULO COM AGRESSOR</label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#VinculocomAgressor_{{vitimas.Id}}" type="text" class="form-control form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin: 1px 1px 10px 1px;">
+                                        <div class="col-xl-2">
+                                            <label>NUMERO BO </label>
+                                        </div>
+                                        <div class="col-xl-10">
+                                            <input id="#NumeroBO_{{vitimas.Id}}" type="text" class="form-control form-control">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                               @* <button type="button" ng-click="SalvarOcorrencias(vitimas.Id)" class="btn btn-success" data-dismiss="modal">Salvar</button>*@
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-    }
-</div>
-
-
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">DADOS PESSOAIS</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-               DADOS CONTIDOS EM BANCO DE DADOS
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">FECHAR</button>
-            </div>
-
-        </div>
     </div>
+
+
+   
+
+
+
 </div>
 
-@*<div class="w3-row" style=" margin: 1px 1px 1px 1px;">
-        <div class="w3-col l3 m6 s4 w3-green w3-center"><p>NOME</p></div>
-        <div class="w3-col l7 m3 s4 w3-dark-grey w3-center"><p>ENDEREÇO</p></div>
-        <div class="w3-col l2 m3 s4 w3-red w3-center"><p>CONTATO</p></div>
-    </div>*@
-
+<script src="~/js/Usuarios.js"></script>

@@ -324,4 +324,16 @@ C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\itextsharp.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Comtele.Sdk.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Twilio.AspNet.Common.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\bin\Debug\netcoreapp3.1\Twilio.AspNet.Core.dll
+C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB2.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\paulo\OneDrive\Área de Trabalho\REPOSITOR_TCC\WEB_S\SYSTEM_SHIELD.WEB2\obj\Debug\netcoreapp3.1\SYSTEM_SHIELD.WEB2.MvcApplicationPartsAssemblyInfo.cache

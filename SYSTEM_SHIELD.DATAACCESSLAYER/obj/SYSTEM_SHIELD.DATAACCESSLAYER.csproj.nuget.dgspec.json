@@ -145,6 +145,10 @@
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.4, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[5.44.0, )"
             }
           },
           "imports": [

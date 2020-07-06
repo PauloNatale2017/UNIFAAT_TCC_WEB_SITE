@@ -25,18 +25,9 @@
           <h1>RELATORIO DAS VITIMAS E USUARIOS CADASTRADOS</h1>
         </div>
         <div class="row" style="width: 100%;">
-            @*<div class="col-xl-3">
-                <button type="button" class="btn btn-primary" style="width: 100%;">Primary</button>
-            </div>
-            <div class="col-xl-3">
-                <button type="button" class="btn btn-secondary" style="width: 100%;">Secondary</button>
-            </div>*@
-            @*<div class="col-xl-3">
-                <button type="button" class="btn btn-info" style="width: 100%;">GERAR RELATORIO EM EXCEL</button>
-            </div>*@
-            <div class="col-xl-3">
-
-                <button type="button" class="btn btn-success" style="width: 100%;">GERAR RELATORIO PDF</button>
+          
+            <div class="col-xl-12" style="text-align:center;">
+                <button  type="button"  class="btn btn-success" style="width: 100%;">RELATORIOS INDIVIDUAIS GERADOS EM PDF</button>
             </div>
         </div>
     </div>
@@ -59,6 +50,7 @@
                     <td>{{qtdeFilhos}}</td>
                     <td>{{qtdeIdoso}}</td>
                     <td>{{qtdeSOS}}</td>
+                    <td><button ng-click="GerarRelatorioPDF(vitima.Id)" type="button" class="btn btn-success" style="width: 100%;">PDF</button></td>
                    
                 </tr>
             </tbody>

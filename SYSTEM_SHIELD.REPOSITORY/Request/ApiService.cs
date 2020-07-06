@@ -10,6 +10,25 @@ namespace SYSTEM_SHIELD.REPOSITORY.Request
     public class ApiService : IApiService
     {
 
+        public async Task<List<VitimaBasic>> GetAllVitimas(string IdUsuario)
+        {
+            var retornoApi = new List<VitimaBasic>();
+
+            try
+            {
+                var retornoPerfil = RestService.For<IApiService>("http://localhost:5001/api/external/");
+                retornoApi = await retornoPerfil.GetAllVitimas(IdUsuario);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return retornoApi;
+
+        }
+
+
         public async Task<List<Vagas>> GetVagasEmpresaUsuario(string IdUsuario)
         {
             var retornoApi = new List<Vagas>();

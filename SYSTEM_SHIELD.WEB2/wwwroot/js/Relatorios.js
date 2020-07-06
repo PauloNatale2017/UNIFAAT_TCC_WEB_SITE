@@ -16,6 +16,27 @@ app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'bl
 
         $scope.VitimaLits = [{}];
 
+        $scope.GerarRelatorioPDF = function (Id) {
+            var path = window.location.origin;
+            //var loginUrlEndPoint = urlExternal + "vitimas/cadastrosbasicos";
+            var loginUrlEndPoint = path + "/Home/GerarDPF?IdUsuario=" + Id;
+            blockUI.start("CARREGANDO...");
+            alert(loginUrlEndPoint);
+            $http.post(loginUrlEndPoint).then(function (response) {
+                if (response.status === 200) {
+                    if (response.data === "null") {
+                        alert("RETORNO DO REQUEST NULL");
+                    }
+                    alert(response.data);
+                }
+                else
+                {
+                    alert("USUARIO NÂO AUTHENTICADO");
+                }
+            });
+            blockUI.stop();
+        };
+
 
         $scope.CadastroBasicos = function () {
 
@@ -47,7 +68,6 @@ app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'bl
                         //IdCadastroSOS: 1006
 
                         $scope.VitimaLits = $scope.basic;
-
                         $scope.Lista = [];
 
                         for (var i = 0; i < $scope.cadastrocompleto.length; i++) {
@@ -78,11 +98,12 @@ app.controller("CtrlRelatorios", ['$scope', '$http', '$location', '$window', 'bl
                                 qtdeSOS : $scope.qtdeSOS
                             };
 
-                            $scope.Lista.push(AddList);
+                            //$scope.Lista.push(AddList);
 
                           };
 
                         console.log(response.data);
+                        console.log($scope.VitimaLits);
 
                     }
 

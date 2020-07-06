@@ -80,6 +80,14 @@ namespace SYSTEM_SHIELD.REPOSITORY.Request
             var func = requestBuilder.BuildRestResultFuncForMethod("GetVagasEmpresaUsuario", new Type[] { typeof(string) });
             return (Task<List<Vagas>>)func(Client, arguments);
         }
+
+        /// <inheritdoc />
+        Task<List<VitimaBasic>> IApiService.GetAllVitimas(string IdUsuario)
+        {
+            var arguments = new object[] { IdUsuario };
+            var func = requestBuilder.BuildRestResultFuncForMethod("GetAllVitimas", new Type[] { typeof(string) });
+            return (Task<List<VitimaBasic>>)func(Client, arguments);
+        }
     }
 }
 

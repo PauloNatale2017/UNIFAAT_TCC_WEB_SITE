@@ -29,18 +29,24 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
             _ApiService = ApiService;
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult Index()
-        {
-            Models.GeraPDF pdf = new GeraPDF();
-            pdf.Gerador();
-
+        {           
             return View();
         }
 
-        public IActionResult Usuarios()
+        [HttpPost]      
+        public string GerarDPF (string IdUsuario)
         {
-            
+            Models.GeraPDF pdf = new GeraPDF(_ApiService);
+            pdf.Gerador(IdUsuario);
+            return "PDF Gerado com sucesso";
+        }
+
+        public async Task<IActionResult> Usuarios()
+        {
+           // List<VitimaBasic> model = new List<VitimaBasic>();
+           // model = await _ApiService.GetAllVitimas("123");
             return View();
         }
 
@@ -182,6 +188,40 @@ namespace SYSTEM_SHIELD.WEB2.Controllers
 
             SendEmail envio = new SendEmail();
             var retornoEnvio =  envio.EnvioDeEmails(usuarios, vagasempresa, Email);
+
+            return true;
+        }
+
+        [HttpPost]
+        [EnableCors("AllowOrigin")]
+        public async Task<bool> EnviarEmailPush(string Email, string IdUsuario)
+        {
+
+            ApiService request = new ApiService();
+            List<VitimaBasic> usuarios = await request.GetEmailUsuario(IdUsuario);
+
+            SendEmail envio = new SendEmail();
+            var retornoEnvio = envio.EnvioDeEmailsPush(usuarios,Email);
+
+            //SendEmail envio = new SendEmail();
+            //envio.EnviaSMS();
+
+            return true;
+        }
+
+
+        [HttpPost]
+        [EnableCors("AllowOrigin")]
+        public async Task<bool> EnviarEmailPushSMS(string Email, string IdUsuario)
+        {
+
+            ApiService request = new ApiService();
+            List<VitimaBasic> usuarios = await request.GetEmailUsuario(IdUsuario);
+
+            string FormatarNumero = Email.Split(')')[1].Replace("-","");
+
+            SendEmail envio = new SendEmail();
+            envio.EnviaSMS(FormatarNumero, usuarios);
 
             return true;
         }

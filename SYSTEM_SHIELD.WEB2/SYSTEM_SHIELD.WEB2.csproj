@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="perfil\perfil0.jpg" />
+    <Content Include="perfil\perfil1.jpg" />
+    <Content Include="perfil\perfil2.jpg" />
+    <Content Include="perfil\perfil3.jpg" />
+    <Content Include="perfil\perfil4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="layouts\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\images\backgroud\" />
@@ -17,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Comtele.Sdk" Version="1.1.6" />
     <PackageReference Include="iTextSharp" Version="5.5.13.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.5" />
     <PackageReference Include="Microsoft.Owin.Security.Google" Version="4.1.0" />
@@ -25,6 +34,8 @@
     <PackageReference Include="Refit" Version="5.1.67" />
     <PackageReference Include="RestClient" Version="3.0.0.21" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="Twilio" Version="5.44.0" />
+    <PackageReference Include="Twilio.AspNet.Core" Version="5.33.1" />
   </ItemGroup>
 
   <ItemGroup>
